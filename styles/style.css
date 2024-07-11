@@ -186,8 +186,20 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  line-height: 21.6px;
+  margin-bottom: 5px;
+  /* line-height: 21.6px; */
 }
+
+/* .search-form__label:hover:nth-child(2) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+} */
+
+.search-form__fieldset:nth-child(2) .search-form__label:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 
 .search-form__textfield {
   width: 225px;
@@ -207,32 +219,53 @@ ol {
   font-weight: 400;
 }
 
+/* .search-form__textfield::placeholder:hover {
+  text-decoration: none;
+} */
+
 .search-form__fieldset {
   border-color: transparent;
 }
 
 .search-form__checkbox-list {
-  width: fit-content;
+  /* width: fit-content; */
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 
 .search-form__label:hover {
   cursor: pointer;
 }
 
-.search-form__label-text {
+/* .search-form__label-text {
   margin-right: 15px;
-}
+} */
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
-  vertical-align: middle;
-  
+  /* display: inline-block; */
+  /* vertical-align: middle; */
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
 }
+
+.search-form__label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+input[type='checkbox']:checked + span::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
 
 
 .button {
@@ -251,6 +284,7 @@ ol {
 
 .button:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .button:focus {
@@ -258,9 +292,46 @@ ol {
 }
 
 .button:focus-visible {
-  outline-offset: 2px;
+  outline-offset: 1px;
   outline: 1px solid #fff;        
 }
+
+
+
+
+/* .search-form__label:focus {
+  outline: none;
+} */
+
+.search-form__label:has(:focus-visible) {
+  outline-offset: 3px;
+  outline: 1px solid #fff; 
+}
+
+.content__list-item:focus {
+  outline: none;
+}
+
+/* .content__list-item */
+
+/* input[type='checkbox']:hover {
+ border-bottom: 1px solid #fff;
+} */
+/* 
+input[type='checkbox'] ~ span:hover {
+  border-bottom: 1px solid #fff;
+ } */
+
+
+
+/* :focus {
+  outline: none;
+} */
+
+/* :has(:focus-visible) {
+  outline-offset: 2px;
+  outline: 1px solid #fff;        
+} */
 
 .search-form__submit-button {
   width: 194px;

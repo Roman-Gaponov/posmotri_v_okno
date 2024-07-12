@@ -16,7 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  padding: 133px 30px;
+  
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 h1,
@@ -41,6 +44,7 @@ ol {
 /* задаем общие размеры и расположение секций */
 
 .content {
+  margin: auto;
   width: 1140px;
   height: 534px;
   display: flex;
@@ -52,7 +56,7 @@ ol {
 /* стилизуем первую секцию с видео контентом */
 
 .result {
-  padding-top: 78px;
+  /* padding-top: 78px; */
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -245,8 +249,9 @@ ol {
 
 input[type='checkbox']:checked + span::before {
   content: "";
-  position: absolute;
-  inset: 2px;
+  display: block;
+  margin-top: 1px;
+  margin-left: 1px;
   width: 15px;
   height: 15px;
   background-color: #fff;
